@@ -45,6 +45,13 @@ function generate_word(cat, pass=false)
 			{ transform: "rotate3d(0, 1, 0, 360deg)" ,  color : "black"}
 		], 
 		{ duration: 500 })
+		
+		var r = Math.round(Math.random() * 255)
+		var g = Math.round(Math.random() * 255)
+		var b = Math.round(Math.random() * 255)
+		
+		card.style["border"] = "5px solid " + `rgb(${r/2}, ${g/2}, ${b/2})`
+		card.style["box-shadow"] = "0 0 10px black, inset 0 0 50px " + `rgb(${r}, ${g}, ${b})`
 	}
 	else
 	{
